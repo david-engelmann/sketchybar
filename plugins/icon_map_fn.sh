@@ -141,6 +141,9 @@ function icon_map() {
   "Cursor")
     icon_result=":cursor:"
     ;;
+  "Codex")
+    icon_result=":openai:"
+    ;;
   "Cypress")
     icon_result=":cypress:"
     ;;
@@ -164,6 +167,9 @@ function icon_map() {
     ;;
   "DEVONthink 3")
     icon_result=":devonthink3:"
+    ;;
+  "Dia")
+    icon_result=":arc:"
     ;;
   "DingTalk" | "钉钉" | "阿里钉")
     icon_result=":dingtalk:"
@@ -664,6 +670,9 @@ function icon_map() {
     icon_result=":vscodium:"
     ;;
   "Warp")
+    icon_result=":warp:"
+    ;;
+  "Wave")
     icon_result=":warp:"
     ;;
   "WebStorm")
