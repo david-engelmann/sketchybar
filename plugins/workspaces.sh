@@ -17,8 +17,7 @@ source "$CONFIG_DIR/plugins/icon_map_fn.sh" >/dev/null # defines icon_map()
 # Monitors were plugged or unplugged: give AeroSpace a moment to move its
 # workspaces, then re-arrange everything (arrange.sh redraws the bar when done)
 if [ "$SENDER" = display_change ]; then
-    sleep 2
-    exec "$HOME/.config/aerospace/arrange.sh"
+    exec env -u SENDER "$HOME/.config/aerospace/arrange.sh" 2
 fi
 
 LOCK_DIR="${TMPDIR:-/tmp}/sketchybar_workspaces.lock"
