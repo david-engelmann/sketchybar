@@ -30,13 +30,14 @@ for sid in A B C D E F G J K M N O P Q S T V W; do
     click_script="aerospace workspace $sid"
 done
 
-# Shown only when AeroSpace is running but can't see any windows
-# (its Accessibility permission has gone stale). Click to open the setting.
+# Shown only when AeroSpace is running but can't see any windows. Usually
+# macOS's Accessibility layer broke after a WindowServer hang/restart (fix: log
+# out and back in); rarely a stale AeroSpace permission (click: opens the setting).
 sketchybar --add item aerospace_health left \
   --set aerospace_health \
   drawing=off \
   icon.drawing=off \
-  label="AeroSpace can't see windows - click to fix" \
+  label="AeroSpace can't see windows - log out and back in" \
   label.font="Hack Nerd Font:Bold:12.0" \
   label.color=$BASE \
   label.padding_left=8 \
